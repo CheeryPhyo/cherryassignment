@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    Create the text box
+  </title>
+</head>
+
+<body>
+
+    <form >
+        <div>
+          <label>Random Count : </label>
+          <input type="text" name="Number" size="20" id="myid">
+        </div>        
+        <button type = "button" onclick="buttonAction()">Random </button>
+        <br>        
+        <br>
+        <div>
+          <label>My Random Number : </label>
+          <label id="radomno"></label></div>
+        
+  </form>    
+      
+  <script>
+    function buttonAction(){
+      var inputVal = document.getElementById("myid").value;
+      var totalMoves = 0;
+      const arrNo = [];
+
+      while( totalMoves < inputVal){
+       arrNo.push(Math.floor(Math.random() * 10)+1);
+       totalMoves++;    
+      }
+
+      document.getElementById("radomno").innerHTML=arrNo;
+    }
+  </script>
+    
+
+</body>
+</html>
